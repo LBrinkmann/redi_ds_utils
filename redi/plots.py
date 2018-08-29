@@ -8,8 +8,10 @@ def spider(skills, categories):
     my_dpi=96
     plt.figure(figsize=(800/my_dpi, 800/my_dpi), dpi=my_dpi)
 
+    n_plots = len(skills)
+
     # Create a color palette:
-    my_palette = plt.cm.get_cmap("Set2", len(skills))
+    my_palette = plt.cm.get_cmap("Set2", n_plots)
 
     # number of variable
     N = len(categories)
@@ -20,7 +22,7 @@ def spider(skills, categories):
 
     for i, row in enumerate(skills):
         # Initialise the spider plot
-        ax = plt.subplot(1,1,i+1, polar=True)
+        ax = plt.subplot(n_plots + 1 // 2, min(2, n_plots), i + 1, polar=True)
 
         # If you want the first axis to be on top:
         ax.set_theta_offset(pi / 2)
