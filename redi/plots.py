@@ -35,12 +35,12 @@ def spider(skills, categories):
         plt.ylim(0,5)
 
         # Ind1
-        values=[row[cat] for cat in categories]
+        values=[row['skills'][cat] for cat in categories]
         values += values[:1]
         ax.plot(angles, values, color=my_palette(i), linewidth=2, linestyle='solid')
         ax.fill(angles, values, color=my_palette(i), alpha=0.4)
 
         # Add a title
-        plt.title(f'skills from {row['name']}', size=10, color=my_palette(i), y=1.1)
+        plt.title(row['title'], size=10, color=my_palette(i), y=1.1)
 
     plt.tight_layout()
