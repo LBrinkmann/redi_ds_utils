@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 # configure these
 PACKAGE_NAME = 'redi-datascience-utils'
 MODULE_NAME = 'redi'
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 
 setup(
     name=PACKAGE_NAME,
