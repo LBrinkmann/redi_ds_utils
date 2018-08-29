@@ -9,7 +9,7 @@ def spider(skills, categories):
     plt.figure(figsize=(800/my_dpi, 800/my_dpi), dpi=my_dpi)
 
     # Create a color palette:
-    my_palette = plt.cm.get_cmap("Set2", len(skills.index))
+    my_palette = plt.cm.get_cmap("Set2", len(skills))
 
     # number of variable
     N = len(categories)
@@ -18,7 +18,7 @@ def spider(skills, categories):
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]
 
-    for i, row in enumerate(skills):
+    for i, row in enumerate(≈):
         # Initialise the spider plot
         ax = plt.subplot(1,1,i+1, polar=True)
 
