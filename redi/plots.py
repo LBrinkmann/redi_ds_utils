@@ -18,7 +18,7 @@ def spider(skills, categories):
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]
 
-    for i, row in enumerate(≈):
+    for i, row in enumerate(skills):
         # Initialise the spider plot
         ax = plt.subplot(1,1,i+1, polar=True)
 
