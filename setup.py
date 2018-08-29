@@ -13,7 +13,8 @@ setup(
             'matplotlib',
             'seaborn',
             'numpy',
-            'pandas'
+            'pandas',
+            'ipdb'
         ],
 
     extras_require={
