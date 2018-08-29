@@ -9,7 +9,6 @@ def spider(skills, categories):
     plt.figure(figsize=(800/my_dpi, 800/my_dpi), dpi=my_dpi)
 
     # Create a color palette:
-    import ipdb; ipdb.set_trace()
     my_palette = plt.cm.get_cmap("Set2", len(skills))
 
     # number of variable
