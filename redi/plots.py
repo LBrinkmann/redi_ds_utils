@@ -18,9 +18,9 @@ def spider(skills, categories):
     angles = [n / float(N) * 2 * pi for n in range(N)]
     angles += angles[:1]
 
-    for row in range(0, len(skills.index)):
+    for i, row in enumerate(skills):
         # Initialise the spider plot
-        ax = plt.subplot(1,1,row+1, polar=True)
+        ax = plt.subplot(1,1,i+1, polar=True)
 
         # If you want the first axis to be on top:
         ax.set_theta_offset(pi / 2)
@@ -35,12 +35,12 @@ def spider(skills, categories):
         plt.ylim(0,5)
 
         # Ind1
-        values=skills.loc[skills.index[row]].values.flatten().tolist()
+        values=[row[cat] for cat in categories]
         values += values[:1]
-        ax.plot(angles, values, color=my_palette(row), linewidth=2, linestyle='solid')
-        ax.fill(angles, values, color=my_palette(row), alpha=0.4)
+        ax.plot(angles, values, color=my_palette(i), linewidth=2, linestyle='solid')
+        ax.fill(angles, values, color=my_palette(i), alpha=0.4)
 
         # Add a title
-        plt.title('skills from '+skills.index[row], size=10, color=my_palette(row), y=1.1)
+        plt.title(f'skills from {row['name']}', size=10, color=my_palette(i), y=1.1)
 
     plt.tight_layout()

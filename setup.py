@@ -10,8 +10,8 @@ setup(
     version=VERSION,
     packages=find_packages(),
     install_requires=[
-            'matplotlib==2.0.0',
-            'seaborn==0.7.1',
+            'matplotlib',
+            'seaborn',
             'numpy',
             'pandas'
         ],
